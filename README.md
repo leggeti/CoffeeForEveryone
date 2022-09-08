@@ -1,4 +1,6 @@
-# The coffeeShop case study
+# CoffeeForEveryone
+
+## The coffeeShop case study
 
 In this project we created two websites both located in New York and London. 
 
@@ -20,7 +22,7 @@ Here is the steps to create the project.
 
 4. Create two Azure container instances (ACI) that runs the website in both London and New York. It has to be in different regions because.
 
-5. Then loadbalance those two with geo-redundancy. (Mike said, use TM, but Front door?
+5. Then loadbalance those two with geo-redundancy. We chose Traffic Manager. Can use Front door as well. 
 
 6. Create a storage account with blob storage and create a lifecycle management rule that says move to Archive tier after 30 days. Here we created a SAS key that can last for x amount of time. 
 
@@ -59,3 +61,5 @@ Create a bicep template. Params.
 From resource groups. 
 
 ## Commands
+
+coming soon...
