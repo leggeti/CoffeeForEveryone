@@ -22,7 +22,7 @@ Here is the steps to create the project.
 
 5. Then loadbalance those two with geo-redundancy. (Mike said, use TM, but Front door?
 
-6. Create a storage account with blob storage and create a lifecycle management rule that says move to Archive tier after 30 days. 
+6. Create a storage account with blob storage and create a lifecycle management rule that says move to Archive tier after 30 days. Here we created a SAS key that can last for x amount of time. 
 
 ## User accounts
 
@@ -59,17 +59,3 @@ Create a bicep template. Params.
 From resource groups. 
 
 ## Commands
-
-//builds the image (have to be in the CoffeeShopTemplate)
-docker build . -t coffee-app
-
-//runs container. Create your own name. Opens to port 80. 
-docker run -d --name contosocontainer -p 49153:80 coffee-app
-
-//tags the image to azurecr.io
-docker tag coffee-app contosocoffee.azurecr.io/coffee-app
-
-Make a new container registry in Azure. I called it contosocoffeeregistry.
-
-//make sure youre logged into azure (docker login <insert name>.azurecr.io). Pushes image to azurecr.io
-docker push fridtjofcoffee.azurecr.io/coffee-app
